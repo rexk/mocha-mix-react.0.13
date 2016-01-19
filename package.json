@@ -1,0 +1,32 @@
+{
+  "name": "mocha-mix-react.0.13",
+  "version": "0.0.1-alpha.0",
+  "description": "mocha-mix react@0.13.x plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rexk/mocha-mix-react.0.13.git"
+  },
+  "keywords": [
+    "mocha",
+    "mocha-mix",
+    "plugin",
+    "react"
+  ],
+  "author": "myungsunrex@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rexk/mocha-mix-react0.13/issues"
+  },
+  "homepage": "https://github.com/rexk/mocha-mix-react0.13#readme",
+  "dependencies": {
+    "react": "^0.13.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^5.0.0-beta6",
+    "eslint": "^1.10.3"
+  }
+}
