@@ -14,10 +14,14 @@ module.exports = function reactPlugin(mochaMix) {
   mochaMix.afterEach(function cleanUp() {
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       var testDivs = document.body.childNodes;
-      var result = Array.prototype.slice.call(testDivs).every(function (div) {
+      Array.prototype.slice.call(testDivs).every(function (div) {
         return React.unmountComponentAtNode(div);
       });
       document.body.innerHTML = '';
     }
   });
 };
+
+var ReactPlugin = require('./lib/ReactPlugin');
+
+module.exports = ReactPlugin;

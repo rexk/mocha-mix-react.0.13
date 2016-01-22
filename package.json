@@ -4,7 +4,10 @@
   "description": "mocha-mix react@0.13.x plugin",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "istanbul cover _mocha --require ./mocha-processor.js $(find ./lib -name *.test.js)",
+    "test:simple": "mocha --require ./mocha-processor.js  $(find ./lib -name *.test.js)",
+    "test:watch": "mocha --require ./mocha-processor.js  --watch $(find ./lib -name *.test.js)",
+    "eslint": "eslint ./lib"
   },
   "repository": {
     "type": "git",
@@ -22,11 +25,24 @@
     "url": "https://github.com/rexk/mocha-mix-react0.13/issues"
   },
   "homepage": "https://github.com/rexk/mocha-mix-react0.13#readme",
-  "dependencies": {
-    "react": "^0.13.3"
+  "peerDependencies": {
+    "react": "^0.13"
   },
   "devDependencies": {
     "babel-eslint": "^5.0.0-beta6",
-    "eslint": "^1.10.3"
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-1": "^6.3.13",
+    "babel-register": "^6.4.3",
+    "eslint": "^1.10.3",
+    "eslint-plugin-react": "^3.15.0",
+    "expect": "^1.13.4",
+    "expect-jsx": "^2.2.2",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.3.4",
+    "mocha-mix": "^1.0.0-alpha.0",
+    "mocha-mix-jsdom": "0.0.1-alpha.3",
+    "mocha-mix-mockery": "0.0.1-alpha.3",
+    "react": "^0.13"
   }
 }

@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - 'stable'
+addons:
+  code_climate:
+    repo_token: 1b6793d5e8a41bd4cbd11d02fcce96ace27801bbcda1cfb559f669ea833ae983
+after_success:
+  - npm install codeclimate-test-reporter
+after_script:
+  - codeclimate-test-reporter < coverage/lcov.info
+deploy:
+  provider: npm
+  email: myungsunrex@gmail.com
+  api_key:
+    secure: dxGcRXWN/8AWIlLqau+A8syNgvbCMDtQVH+DZ2lFQcN42ADXuPcwG7JI0AXtNjmG8V1NVSSm8W9p9d0CiwT++AOXLZZAQ/vHQ/4JJK3Sd8xmFaWtDdf80D/M3SiIB9P0+ANMUWD2OatLVP7cg7jDdNoj6vJocRJJS4MfC8Erh9SSEIKNQFcy4HMqdagC+n7Q9ozHEKir/wYcxTV3Us1RHOhW9ogBbhDhmig/nrOo5kXNvw9EsIogYsiYB2DgsWGOdSE11Wivno+Q8Dw8zmWMzupY6mZOO5R5RDUiziEiYSJJs7vnxNtZS5TMU//ni25Dp+JzcdyKLUmDC4+W/0MT5P3xO7OrP0BFqykIEG1TqIQbcOasMrqLn0mv6wWmxVR6dnxRLkoVbdbLPulm9SKl4kVhmEhOVUh50fqp9lXLMh5jXZcyBndlaBIdgJFOkrhHmR41Z55zpyiUQsqC1TW1tqmkFvm+k8mX8Hrqhevq4oEYWlyE/u5ka90JMQSU7+HfITyrC8uL97F6/Q91ecDfHHKXmuQqm01dP/Cp+d4+OQfmiqUyFCL3pVvgNXJjWlU33Ybg2GExB4qkOb0e+zJmKHyHT6eCmRneLwckV9MYc/SeFlAuhMItM0NQzXx9PCb4MbLZOTeLXAzzcR4XJGe0uhsd1wM6RkbFAed/3qZnocg=
+  on:
+    tags: true
+    repo: rexk/mocha-mix-react.0.13

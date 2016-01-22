@@ -1,0 +1,5 @@
+**/__tests__/
+mocha-processor.js
+.*.yml
+.*ignore
+.*rc
